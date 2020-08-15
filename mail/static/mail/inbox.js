@@ -46,42 +46,28 @@ function load_mailbox(mailbox) {
     // Loop over each email
     emails.forEach(email => {
 
-      // Populate the row with data
+      // Create a div for each row
+      const row = document.createElement('div');
+      row.className = 'row no-gutters';
+      
+      // If view is sent then show recipients rather than sender
       if (mailbox === 'sent') {
-        email.recipients.forEach(recipient => {
 
-          // Create a div for each row
-          const row = document.createElement('div');
-          row.className = 'row no-gutters';
+        row.innerHTML = `<div class="col-4">${email.recipients}</div><div class="col-5">${email.subject}</div><div class="col-3">${email.timestamp}</div>`;
 
-          // Make background grey if the email is read
-          if (email.read) {
-            row.style.backgroundColor = '#f1f1f1';
-          }
-
-          row.innerHTML = `<div class="col-4">${recipient}</div><div class="col-5">${email.subject}</div><div class="col-3">${email.timestamp}</div>`;
-          // Append the row to a container and to DOM
-          container.append(row);
-          emailsView.append(container);
-        });
       }
       else {
-
-        // Create a div for each row
-        const row = document.createElement('div');
-        row.className = 'row no-gutters';
-
         // Make background grey if the email is read
         if (email.read) {
           row.style.backgroundColor = '#f1f1f1';
         }
 
         row.innerHTML = `<div class="col-4">${email.sender}</div><div class="col-5">${email.subject}</div><div class="col-3">${email.timestamp}</div>`;
-        // Append the row to a container and to DOM
-        container.append(row);
-        emailsView.append(container);
       }
 
+      // Append the row to a container and to DOM
+      container.append(row);
+      emailsView.append(container);
 
     });
   });
