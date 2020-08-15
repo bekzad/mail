@@ -1,0 +1,10 @@
+textarea {
+    min-height: 400px;
+}
+
+.col-4, .col-5, .col-3 {
+    padding: 10px 0;    
+    border-bottom: 1px solid #212529;
+    border-collapse: collapse;
+}
+
