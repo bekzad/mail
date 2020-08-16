@@ -3,25 +3,27 @@
         opacity: 1;
         height: 100%;
         line-height: 100%;
-        padding: 20px;
-        margin-bottom: 10px;
+        width: 100%;
+        opacity: 100%;
     }
-    75% {
-        opacity: 0;
-        height: 100%;
-        line-height: 100%;
-        padding: 20px;
-        margin-bottom: 10px;
+    50% {
+        opacity: 0%;
     }
     100% {
-        opacity: 0;
-        height: 0px;
-        line-height: 0px;
-        padding: 0px;
-        margin-bottom: 0px;
+        height: 50%;
+        line-height: 50%;
+        width: 50%;
+        opacity: 0%;
     }
 }
 
+#email-id, #compose-view {
+    margin: 0 auto;
+    animation-name: hide;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
 
 textarea {
     min-height: 400px;
@@ -67,3 +69,7 @@ p {
     margin: 1rem 0;
 }
 
+#composeAlert {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}

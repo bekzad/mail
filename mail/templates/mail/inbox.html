@@ -15,6 +15,7 @@
     </div>
 
     <div id="email-id">
+        <div role="alert" class="alert alert-success" style="display: none" id="archiveAlert"></div>
         <div class="email-metadata">
             <label for="sender">Sender:</label>
             <p id="sender"></p>
@@ -32,17 +33,19 @@
 
     <div id="compose-view">
         <h3>New Email</h3>
+
         <form id="compose-form">
             <div class="form-group">
                 From: <input disabled class="form-control" value="{{ request.user.email }}">
             </div>
             <div class="form-group">
-                To: <input id="compose-recipients" class="form-control" autocomplete="off">
+                To: <input id="compose-recipients" class="form-control">
             </div>
             <div class="form-group">
                 <input class="form-control" id="compose-subject" placeholder="Subject" autocomplete="off">
             </div>
             <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            <div role="alert" style="display: none" id="composeAlert"></div>
             <input type="submit" class="btn btn-primary" id="compose-submit">
         </form>
     </div>
