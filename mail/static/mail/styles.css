@@ -1,10 +1,69 @@
+@keyframes hide {
+    0% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    75% {
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    100% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+
 textarea {
     min-height: 400px;
 }
 
 .col-4, .col-5, .col-3 {
-    padding: 10px 0;    
-    border-bottom: 1px solid #212529;
-    border-collapse: collapse;
+    padding: 1rem 0;    
+}
+.main-body, .email-metadata {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+    color: #222;
+    margin-bottom: 2rem;
+}
+#sender, #recipients {
+    display: inline-block;
+    padding-right: 1rem;
+}
+p {
+    margin-top: 1rem;
+}
+.row {
+    padding-left: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+.row:hover, .row.active {
+    text-decoration: none;
+    color: #000;
+    border-color: #000;
+}
+
+#timestamp {
+    float: right;
+    margin: 1rem 0;
+    line-height: 24px;
+}
+
+#compose-submit {
+    margin: 1rem 0;
 }
 
